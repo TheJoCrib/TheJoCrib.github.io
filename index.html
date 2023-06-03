@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furkan Karasu</title>
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="scrollPath"></div>
+    <div id="progressbar"></div>
+    <header class="header">
+      <a href="#home" class="logo"><span>Portfolio</span></a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Hem</a>
+        <a href="#about">Om</a>
+        <a href="#services">Våra Tjänster</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!--Home section designet-->
+    <section class="home" id="home" id="progressbar">
+      <div class="home-content">
+        <h3>Hej det är jag!</h3>
+        <h1>Furkan Karasu</h1>
+        <h3>Självlärd <span class="multiple-text"></span></h3>
+        <p>Datoringenjör inom <span>DataTeknik</span>.</p>
+        <div class="social-media">
+          <a href="#" onclick="Facebook()"><i class="bx bxl-facebook"></i></a>
+          <a href="#" onclick="Instagram()"><i class="bx bxl-instagram"></i></a>
+          <a href="#" onclick="Twitter()"><i class="bx bxl-twitter"></i></a>
+          <a href="#" onclick="Reddit()"><i class="bx bxl-reddit"></i></a>
+        </div>
+        <a href="#" class="btn" onclick="DownloadCv()">Ladda ner CV</a>
+      </div>
+      <div class="home-img">
+        <img src="img/BossmanFinal.png" alt="s" />
+      </div>
+    </section>
+
+    <!--about section design-->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="img/BossmanFinalRight.png" class="sectionImg" alt="" />
+      </div>
+
+      <div class="about-content">
+        <h2 class="heading">Om <span>Mig</span></h2>
+        <h3>Frontend Developer</h3>
+        <p>
+          Möt Furkan - en talangfull 18-årig kille med en passion för
+          programmering och ett hjärta fyllt av kärlek för sina nära och kära.
+          Han är bosatt i ett hus tillsammans med fyra andra personer och
+          studerar på <span>Tumba Gymnasium</span>. Furkan är en hängiven
+          programmerare som älskar att utveckla program i olika språk, inklusive
+          C++, C#, och både Front- och Backend JavaScript. Han har en otrolig
+          förmåga att sitta i timmar och fördjupa sig i sitt arbete, och det är
+          verkligen något som han brinner för. Att skapa och lösa komplexa
+          problem i kod ger honom en känsla av tillfredsställelse och glädje.
+          Men det är inte bara programmering som definierar Furkan. Han är också
+          känd för sin generositet och vänlighet. Han är alltid redo att hjälpa
+          andra och dela med sig av sin kunskap och expertis. Furkan har en
+          oerhörd förmåga att skapa en positiv och välkomnande atmosfär där han
+          sprider glädje och värme till människor omkring sig. För Furkan är
+          vänskap och familj viktiga värden i hans liv. Han älskar sina vänner
+          och familj över allt annat och sätter alltid deras välmående och lycka
+          i första hand. Han tror på kraften av gemenskap och att dela livets
+          glädjeämnen tillsammans. Furkan har en stark andlig tro och litar på
+          Guds plan för sitt liv. Han är tacksam för den väg som Gud har ritat
+          för honom och ser varje dag som en gåva. Hans tro ger honom styrka och
+          mod att möta utmaningar och att vara en god människa.
+        </p>
+        <a href="#" onclick="ReadMore()" class="btn">Läs Mer</a>
+      </div>
+    </section>
+
+    <!--services section-->
+
+    <section class="services" id="services">
+      <h2 class="heading">Våra <span>Tjänster</span></h2>
+
+      <div class="services-container">
+        <div class="services-box">
+          <i class="bx bx-code-alt"></i>
+          <h3>Web Development</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="#" onclick="ReadMore()" class="btn">Läs Mer</a>
+        </div>
+
+        <div class="services-box">
+          <i class="bx bx-paint-roll"></i>
+          <h3>Graphic Design</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="#" onclick="ReadMore()" class="btn">Läs Mer</a>
+        </div>
+
+        <div class="services-box">
+          <i class="bx bx-bar-chart-square"></i>
+          <h3>Digital Marketing</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="#" onclick="ReadMore()" class="btn">Läs Mer</a>
+        </div>
+        <div class="services-box">
+          <i class="bx bx-code-alt"></i>
+          <h3>Web Development</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="#" onclick="ReadMore()" class="btn">Läs Mer</a>
+        </div>
+        <div class="services-box">
+          <i class="bx bx-code-alt"></i>
+          <h3>Game Development</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="#" onclick="ReadMore()" class="btn">Läs Mer</a>
+        </div>
+        <div class="services-box">
+          <i class="bx bx-code-alt"></i>
+          <h3>Reverse-Engineering</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="#" onclick="ReadMore()" class="btn">Läs Mer</a>
+        </div>
+      </div>
+    </section>
+
+    <!--portfolio section-->
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading">Senaste <span>Projekten</span></h2>
+
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img src="img/LatestProject.png" alt="" />
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="img/LatestProject.png" alt="" />
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="img/LatestProject.png" alt="" />
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="img/LatestProject.png" alt="" />
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="img/LatestProject.png" alt="" />
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere,
+              aliquid unde sit ratione eius dolor perspiciatis alias labore
+              eveniet tenetur iure libero eos commodi veniam perferendis.
+              Doloribus cumque quidem earum!
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="img/LatestProject.png" alt="" />
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere,
+              aliquid unde sit ratione eius dolor perspiciatis alias labore
+              eveniet tenetur iure libero eos commodi veniam perferendis.
+              Doloribus cumque quidem earum!
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Contact section-->
+    <section class="contact" id="contact">
+      <h2 class="heading">Kontakta <span>Mig!</span></h2>
+      <form id="contact-form" action="#">
+        <div class="input-box">
+          <input type="text" name="name" placeholder="Fullständig Namn" />
+          <input type="email" name="email" placeholder="E-mail Address" />
+        </div>
+        <div class="input-box">
+          <input type="tel" name="phone" placeholder="Telefon Nummer" />
+          <input type="text" name="subject" placeholder="Ämne" />
+        </div>
+        <textarea
+          name="message"
+          cols="30"
+          rows="10"
+          placeholder="Ditt Meddelande"
+        ></textarea>
+        <input
+          type="submit"
+          id="myButton"
+          value="Skicka Meddelandet"
+          class="btn"
+        />
+        <div id="myPopup">
+          <div class="popup-content">
+            <h2><span>Request has been sent</span> =></h2>
+            <p>
+              If you still face any issues, let me know by contacting me through
+              my socials
+            </p>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!--Footer Design-->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>
+          Copyright &copy; 2023 by <span>Furkan Karasu</span> | All Rights
+          Reserved.
+        </p>
+      </div>
+
+      <div class="footer-iconTop">
+        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+      </div>
+    </footer>
+
+    <!--Custom JS-->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="js/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
+    <!--Type JS-->
+  </body>
+</html>
