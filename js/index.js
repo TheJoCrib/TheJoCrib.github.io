@@ -151,35 +151,138 @@ document
 
 function Facebook() {
   console.log("Send over to Facebook Page");
+  window.open("https://www.facebook.com/me/");
 }
 
 function Instagram() {
   console.log("Send over to Instagram Page");
+  window.open("https://www.instagram.com/furre_aka_furre/");
 }
 
 function Twitter() {
-  console.log("Send over to Twitter Page");
+  window.open("https://twitter.com/CribJo");
 }
 
 function Reddit() {
-  console.log("Send over to Reddit Page");
+  window.open("https://www.reddit.com/user/FurreModz/");
 }
 
 function DownloadCv() {
-  console.log("Ladda ner CV");
+  function download(filename, text) {
+    var element = document.createElement("a");
+    element.setAttribute(
+      "href",
+      "data:text/plain;charset=utf-8," + encodeURIComponent(text)
+    );
+    element.setAttribute("download", filename);
+
+    element.style.display = "none";
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+  }
+
+  // Start file download.
+  download("Furkan - CV.txt", "HEJ DRA ÅT HELVETE");
 }
 
 if ((x = 1)) {
   myButton.addEventListener("click", function () {
-    myPopup.style.display = "block";
+    let audio1 = new Audio("/attachment/Sent.mp3");
+    audio1.play();
+    setTimeout(() => {
+      myPopup.style.display = "block";
+    }, 1000);
   });
 }
 
-//Read More Btns.
+//ReadMore Btns.
 
-reqContainer = document.querySelector(".services-container");
-function ReadMore() {
-  if (reqContainer) {
-    reqContainer.style.display = "none";
+function toggleReadMore(className) {
+  const description = document.querySelector("." + className);
+  const button = description.nextElementSibling;
+
+  if (description.classList.contains("expanded")) {
+    description.style.maxHeight = "8rem";
+    button.textContent = "Läs Mer";
+  } else {
+    description.style.maxHeight = description.scrollHeight + "px";
+    button.textContent = "Läs Mindre";
   }
+
+  description.classList.toggle("expanded");
+}
+
+function Shoppen() {
+  //window.open("https://thejocrib.mysellix.io/");
+}
+
+window.addEventListener("DOMContentLoaded", function () {
+  var videoPopup = document.getElementById("video-popup");
+  var youtubeVideo = document.getElementById("youtube-video");
+
+  videoPopup.classList.add("hidden");
+  youtubeVideo.src = "";
+  youtubeVideo.style.display = "none";
+});
+
+let popupDisplayed = false;
+
+function AMV() {
+  if (!popupDisplayed) {
+    let x1 = document.querySelector("#myPopup1");
+    x1.style.display = "block";
+    let audio = new Audio("/attachment/Notif.mp3");
+    audio.play();
+    setTimeout(() => {
+      x1.style.display = "none";
+    }, 5000);
+
+    popupDisplayed = true;
+  }
+
+  var videoPopup = document.getElementById("video-popup");
+  var youtubeVideo = document.getElementById("youtube-video");
+
+  if (videoPopup.classList.contains("hidden")) {
+    videoPopup.classList.remove("hidden");
+    youtubeVideo.src =
+      "https://www.youtube.com/embed/YvTeNeRUG1Y?autoplay=1&controls=0&disablekb=1";
+    youtubeVideo.style.display = "block";
+  } else {
+    videoPopup.classList.add("hidden");
+    youtubeVideo.src = "";
+    youtubeVideo.style.display = "none";
+  }
+}
+
+function closeVideoPopup() {
+  var videoPopup = document.getElementById("video-popup");
+  var youtubeVideo = document.getElementById("youtube-video");
+
+  videoPopup.classList.add("hidden");
+  youtubeVideo.src = "";
+  youtubeVideo.style.display = "none";
+}
+
+//Extra below noticication popup
+function Yes() {
+  var popup = document.getElementById("popup");
+  popup.classList.remove("hidden");
+  setTimeout(function () {
+    popup.style.top = "0";
+  }, 100);
+  setTimeout(function () {
+    hidePopup();
+  }, 3000);
+}
+
+function hidePopup() {
+  var popup = document.getElementById("popup");
+  popup.style.top = "-100px";
+  setTimeout(function () {
+    popup.classList.add("hidden");
+  }, 500);
 }

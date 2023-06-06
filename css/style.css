@@ -207,6 +207,26 @@ span {
   transition: 0.4s ease-out;
 }
 
+.btn1 {
+  display: inline-block;
+  padding: 0.3rem 0.3rem;
+  background: var(--main-color);
+  border-radius: 1rem;
+  font-size: 1.1rem;
+  color: var(--second-bg-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.3s ease-out;
+}
+
+#youtube-video {
+  pointer-events: none;
+}
+
+.btn1:hover {
+  box-shadow: 0 0 5rem var(--main-color);
+}
+
 .btn {
   display: inline-block;
   padding: 1rem 2.8rem;
@@ -219,9 +239,13 @@ span {
   font-weight: 600;
   transition: 0.3s ease-out;
 }
+#video-overlay {
+  position: fixed;
+  display: none;
+}
 
 .btn:hover {
-  box-shadow: 0 0 5rem var(--main-color);
+  box-shadow: 0 0 3rem var(--main-color);
 }
 
 .about {
@@ -253,6 +277,35 @@ span {
 .about-content p {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
+  overflow: hidden;
+  max-height: 10.8rem; /* Adjust this value based on the desired visible text */
+  transition: max-height 0.5s ease;
+  position: relative;
+}
+
+.about-content p::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5rem; /* Adjust this value to control the height of the partially visible text */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    var(--second-bg-color)
+  );
+}
+
+.about-content .btn:hover {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.about-content .btn.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .services h2 {
@@ -282,8 +335,25 @@ span {
   transform: scale(1.05);
 }
 
+.services-box .btn.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.services-box .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
 .services-box i {
   font-size: 7rem;
+  color: var(--main-color);
+}
+
+.services-box p.expanded {
+  max-height: unset;
   color: var(--main-color);
 }
 
@@ -294,6 +364,9 @@ span {
 .services-box p {
   font-size: 1.6rem;
   margin: 1rem 0 3rem;
+  overflow: hidden;
+  max-height: 8rem;
+  transition: max-height 0.5s ease;
 }
 
 .portfolio {
@@ -641,6 +714,49 @@ span {
 }
 
 @keyframes popup-anim {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/*extra*/
+
+#myPopup1 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.popup-content1 {
+  background-color: #071488;
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.close1 {
+  float: right;
+  cursor: pointer;
+}
+
+/* Animation */
+.popup-content1 {
+  animation: popup-anim 0.3s ease-in-out;
+}
+
+@keyframes popup-anim1 {
   0% {
     opacity: 0;
     transform: scale(0.7);

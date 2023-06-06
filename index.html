@@ -16,6 +16,26 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div id="myPopup">
+      <div class="popup-content">
+        <h2><span>Request has been sent</span> =></h2>
+        <p>
+          If you still face any issues, let me know by contacting me through my
+          socials
+        </p>
+      </div>
+    </div>
+
+    <div id="myPopup1">
+      <div class="popup-content1">
+        <h2><span>OBS!</span> =></h2>
+        <p>
+          Testa att klicka två gånger om videon inte börjar! Du kan också ta
+          bort spelaren genom att klicka på samma knapp.
+        </p>
+      </div>
+    </div>
+
     <div id="scrollPath"></div>
     <div id="progressbar"></div>
     <header class="header">
@@ -60,7 +80,7 @@
 
       <div class="about-content">
         <h2 class="heading">Om <span>Mig</span></h2>
-        <p>
+        <p class="services-description0">
           Möt Furkan - en talangfull 18-årig kille med en passion för
           programmering och ett hjärta fyllt av kärlek för sina nära och kära.
           Han är bosatt i ett hus tillsammans med fyra andra personer och
@@ -83,7 +103,9 @@
           för honom och ser varje dag som en gåva. Hans tro ger honom styrka och
           mod att möta utmaningar och att vara en god människa.
         </p>
-        <a href="#" onclick="ReadMore()" class="btn">Läs Mer</a>
+        <a onclick="toggleReadMore('services-description0')" class="btn"
+          >Läs Mer</a
+        >
       </div>
     </section>
 
@@ -95,89 +117,178 @@
       <div class="services-container">
         <div class="services-box">
           <i class="bx bx-code-alt"></i>
-          <h3>Web Development</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          <h3>Webbutveckling</h3>
+          <p class="services-description">
+            Webbdesign och frontend-utveckling med fokus på elegant och modern
+            design. Jag använder HTML, CSS och responsiv design för att
+            säkerställa att webbsidor ser bra ut på alla enheter. Med
+            JavaScript, React eller Angular skapar jag interaktiva och dynamiska
+            webbplatser med funktioner som formulärhantering, animationer och
+            bildspel för en förbättrad användarupplevelse. Dessutom har jag
+            kunskap inom backend-utveckling med Node.js och Express för att
+            skapa robusta och skalbara webbapplikationer med anpassade API:er
+            och databasintegration.
           </p>
-          <a href="#" onclick="ReadMore()" class="btn">Läs Mer</a>
+          <a onclick="toggleReadMore('services-description')" class="btn"
+            >Läs Mer</a
+          >
         </div>
 
         <div class="services-box">
           <i class="bx bx-paint-roll"></i>
-          <h3>Graphic Design</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          <h3>Grafisk Design</h3>
+          <p class="services-description1">
+            Flera olika designverktyg, inklusive Photoshop, Maya, Blender,
+            Illustrator och Sketch. Med Photoshop kan jag skapa och redigera
+            bilder samt skapa grafiska element för webbdesign. Maya och Blender
+            används för att skapa 3D-modeller, animeringar och visuella
+            effekter. Illustrator är perfekt för vektorgrafik och skalbara
+            illustrationer, medan Sketch är specialiserat på
+            användargränssnittsdesign. Genom att kombinera dessa verktyg kan jag
+            erbjuda en komplett lösning för dina design- och
+            webbprogrammeringsbehov, oavsett om det handlar om bilder,
+            3D-element, logotyper eller användargränssnitt.
           </p>
-          <a href="#" onclick="ReadMore()" class="btn">Läs Mer</a>
+          <a onclick="toggleReadMore('services-description1')" class="btn"
+            >Läs Mer</a
+          >
         </div>
 
         <div class="services-box">
           <i class="bx bx-bar-chart-square"></i>
-          <h3>Digital Marketing</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          <h3>Digital Marknadsföring</h3>
+          <p class="services-description2">
+            Jag kan hjälpa dig att skapa en e-handelsplattform med säkra
+            betalningslösningar och användarvänlig navigering för en smidig
+            köpupplevelse. Genom att optimera din webbutik för sökmotorer och
+            använda betald annonsering kan vi locka fler kunder. Jag kan också
+            hjälpa dig med content marketing och sociala medier för att engagera
+            och behålla kunder. Genom analys av data och kundinsikter kan vi
+            skapa riktade marknadsföringskampanjer för att attrahera relevanta
+            kunder. Tillsammans kan vi bygga en framgångsrik online-närvaro och
+            öka försäljningen i din verksamhet.
+            <a
+              data-sellix-product="PRODUCT_62f62a4d8bfbf"
+              data-sellix-css="https://cdn.sellix.io/static/css/custom-embed-styles.css"
+              onclick="Shoppen()"
+              class="btn1"
+              >Till Shoppen</a
+            >ㅤㅤㅤㅤ
           </p>
-          <a href="#" onclick="ReadMore()" class="btn">Läs Mer</a>
+          <a onclick="toggleReadMore('services-description2')" class="btn"
+            >Läs Mer</a
+          >
         </div>
         <div class="services-box">
-          <i class="bx bx-code-alt"></i>
-          <h3>Web Development</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          <i class="bx bx-game"></i>
+          <h3>Spelutveckling</h3>
+          <p class="services-description3">
+            Behärskar både Unity och Unreal Engine 5, vilket ger mig en bred
+            kompetens inom spelutveckling. Med Unity kan jag skapa olika spel i
+            2D och 3D för olika plattformar, medan Unreal Engine 5 ger mig
+            möjlighet att skapa imponerande och fotorealistiska spelupplevelser.
+            Jag kan dra nytta av Unitys användargemenskap och resursbibliotek
+            samt utnyttja Unreal Engine 5s avancerade grafik- och
+            fysikfunktioner för att skapa engagerande spel. Oavsett om du
+            behöver en snabb 2D-spelupplevelse eller en fotorealistisk 3D-värld
+            kan jag skapa spel som imponerar och engagerar spelarna. Med min
+            kunskap inom båda plattformarna kan jag erbjuda en flexibel och
+            anpassad spelutvecklingslösning för att skapa minnesvärda
+            spelupplevelser.
           </p>
-          <a href="#" onclick="ReadMore()" class="btn">Läs Mer</a>
+          <a onclick="toggleReadMore('services-description3')" class="btn"
+            >Läs Mer</a
+          >
         </div>
         <div class="services-box">
-          <i class="bx bx-code-alt"></i>
-          <h3>Game Development</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <a href="#" onclick="ReadMore()" class="btn">Läs Mer</a>
-        </div>
-        <div class="services-box">
-          <i class="bx bx-code-alt"></i>
+          <i class="bx bx-laptop"></i>
           <h3>Reverse-Engineering</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          <p class="services-description4">
+            Jag som expert inom reverse engineering och LUA-scripting
+            specialiserar mig på att utforska och analysera Unity-spel, särskilt
+            GTA 5: Online. Med mina kunskaper kan jag skapa anpassade fusk och
+            modifikationer som ger spelare unika fördelar och förändrar
+            spelupplevelsen. Genom att använda Pluto, ett kraftfullt verktyg för
+            modifikationer inom GTA 5: Online, kan jag utforska spelets interna
+            strukturer och lägga till nya funktioner och mekanismer. Det ger mig
+            möjligheten att skapa unika spelupplevelser och öppna upp nya
+            möjligheter för spelare att njuta av spelet på ett sätt som tidigare
+            inte var möjligt.
           </p>
-          <a href="#" onclick="ReadMore()" class="btn">Läs Mer</a>
+          <a onclick="toggleReadMore('services-description4')" class="btn"
+            >Läs Mer</a
+          >
+        </div>
+        <div class="services-box">
+          <img src="img/Resolve.png" alt="" />
+          <h3>Video Redigering</h3>
+          <p class="services-description5">
+            Behärskar framförallt flera videoredigeringsverktyg, inklusive
+            Davinci Resolve och Sony Vegas Pro 19. Med dessa verktyg kan jag
+            skapa och redigera professionella videor. Jag använder Davinci
+            Resolve för att klippa och trimma videoklipp, justera färgbalans och
+            skapa imponerande visuella effekter. Med Sony Vegas Pro 19 kan jag
+            kombinera videoklipp, lägga till effekter och övergångar, och skapa
+            dynamiska och engagerande videoprojekt. En av mina specialiteter är
+            att skapa Anime Music Videos (AMV). Oavsett om du behöver roliga
+            videor, professionella projekt eller AMV:s, kan jag använda min
+            expertis inom videoredigering för att skapa imponerande och
+            engagerande resultat. Några exempel:
+            <a onclick="AMV()" id="myButton1" class="btn1">Titta Video</a>
+          </p>
+          <a onclick="toggleReadMore('services-description5')" class="btn"
+            >Läs Mer</a
+          >
+
+          <div id="video-overlay" onclick="closeVideoPopup()"></div>
+
+          <div id="video-popup" class="hidden">
+            <div class="video-wrapper">
+              <iframe
+                id="youtube-video"
+                width="560"
+                height="315"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-box">
+          <i class="bx bx-bulb"></i>
+          <h3>Kreativitet</h3>
+          <p class="services-description6">
+            Med min förmåga att tänka utanför boxen kan jag skapa nya verk och
+            optimera kod. Kreativitet är nyckeln inom programmering. Genom att
+            experimentera och utforska lösningar kan jag lösa komplexa problem.
+            Låt oss tillsammans utforska och skapa framtidens digitala värld!
+            "Kreativitet är inte att ha bra idéer, utan att ha många idéer." Jag
+            tror på att komma fram med olika idéer och våga experimentera för
+            att hitta innovativa lösningar inom programmering. Genom att
+            kombinera min kreativitet med min tekniska kunskap kan vi utforska
+            och skapa framtidens digitala värld
+          </p>
+          <a onclick="toggleReadMore('services-description6')" class="btn"
+            >Läs Mer</a
+          >
+        </div>
+
+        <div class="services-box">
+          <i class="bx bxl-apple"></i>
+          <h3>IOS Utvecklare</h3>
+          <p class="services-description7">
+            Som en erfaren iOS-utvecklare är jag specialiserad på att skapa
+            appar med Xcode och Swift. Jag har förmågan att skapa program som
+            Messenger, Whatsapp och andra applikationer som kräver en stark
+            nätverksanslutning och serverintegration. Med min kunskap och
+            erfarenhet kan jag utveckla och anpassa appar efter dina behov. Om
+            du behöver en tillförlitlig och kunnig iOS-utvecklare är jag redo
+            att hjälpa till. Tillsammans kan vi skapa imponerande och
+            välfungerande applikationer för iOS-plattformen.
+          </p>
+          <a onclick="toggleReadMore('services-description7')" class="btn"
+            >Läs Mer</a
+          >
         </div>
       </div>
     </section>
@@ -190,70 +301,86 @@
         <div class="portfolio-box">
           <img src="img/LatestProject.png" alt="" />
           <div class="portfolio-layer">
-            <h4>Web Design</h4>
+            <h4>Portal Quest: <span>Math Edition</span></h4>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
+              Spelet handlar om en kung som har hamnat i fara och behöver ta sig
+              fram genom de opålitliga fängelsehålorna men han har inte tränat
+              <span>Matematik</span> på ett tag vad kommer att hända nu? Spelet
+              är gjord på HTML, JS, CSS.
             </p>
             <a href="#"><i class="bx bx-link-external"></i></a>
           </div>
         </div>
 
         <div class="portfolio-box">
-          <img src="img/LatestProject.png" alt="" />
+          <img src="img/PrehistoricArt.png" alt="" />
           <div class="portfolio-layer">
-            <h4>Web Design</h4>
+            <h4>Photoshop Adobe <span>2020</span></h4>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
+              Detta projekt reflekterar vårt samhälle i förhållande till
+              forntiden och de förändringar som har skett. Syftet var att
+              undersöka hur vår värld har förändrats och budskapet fokuserar på
+              bevarandet av mänskligheten.
             </p>
             <a href="#"><i class="bx bx-link-external"></i></a>
           </div>
         </div>
 
         <div class="portfolio-box">
-          <img src="img/LatestProject.png" alt="" />
+          <img src="img/Once Upon A Viking.png" alt="" />
           <div class="portfolio-layer">
-            <h4>Web Design</h4>
+            <h4>Unity <span>{Once Upon A Viking}</span></h4>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
+              Leif Eriksson, viking en gång i tiden, har blivit omhändertagen i
+              hans dröm när han nu har vaknat i ett öde mark där han måste
+              överleva för att ta sig vidare genom portalen hem till sin familj.
             </p>
             <a href="#"><i class="bx bx-link-external"></i></a>
           </div>
         </div>
 
         <div class="portfolio-box">
-          <img src="img/LatestProject.png" alt="" />
+          <img src="img/Davinci.png" alt="" />
           <div class="portfolio-layer">
-            <h4>Web Design</h4>
+            <h4><span>Davinci Resolve Studio 18.5</span> [AMV]</h4>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
+              Under denna moment, gjorde jag en AMV som visas i typ av en
+              youtube-video som ni redan har sätt. Det tog mig ungefär en halv
+              dag för att se till om hur SFX, VFX och budskapet med angivna
+              musiken spelade för roll och därefter var det enkelt att utföra.
             </p>
             <a href="#"><i class="bx bx-link-external"></i></a>
           </div>
         </div>
 
         <div class="portfolio-box">
-          <img src="img/LatestProject.png" alt="" />
+          <img src="img/LuaReverseGrand.png" alt="" />
           <div class="portfolio-layer">
-            <h4>Web Design</h4>
+            <h4><span>Reverse-Engineering</span> x <span>LUA</span></h4>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere,
-              aliquid unde sit ratione eius dolor perspiciatis alias labore
-              eveniet tenetur iure libero eos commodi veniam perferendis.
-              Doloribus cumque quidem earum!
+              Denna programmerings språk använder jag för att Reverse-Engineera
+              Grand Theft Auto 5: Online genom att få tillgång till {Stand,
+              ramverks API} och därefter utöva alla möjliga saker. I detta
+              projekt har jag skapat en meny och kan få tillgång till
+              användarens IP-Addresser och kan boota av de från spelet. Däremot
+              gör jag inte det, för det strider mot moraliska koden. Detta är
+              bara för forskningssyfte ;)
             </p>
             <a href="#"><i class="bx bx-link-external"></i></a>
           </div>
         </div>
 
         <div class="portfolio-box">
-          <img src="img/LatestProject.png" alt="" />
+          <img src="img/Shop.png" alt="" />
           <div class="portfolio-layer">
-            <h4>Web Design</h4>
+            <h4>Webbutik</h4>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere,
-              aliquid unde sit ratione eius dolor perspiciatis alias labore
-              eveniet tenetur iure libero eos commodi veniam perferendis.
-              Doloribus cumque quidem earum!
+              Under detta moment hade jag startat upp en webbsida och under bara
+              en månad fått upp till 50 kunder bara av att sälja digitala
+              medier, allt handlar om att kunna tilltala människor vad som
+              verkligen är bra för de och inte. Det handlar om att visa omsorg
+              och vara ärlig för att lyckas. Tyvärr säger jag inte hur mycket
+              jag totalt känat under en månad men mer än 5000kr.
             </p>
             <a href="#"><i class="bx bx-link-external"></i></a>
           </div>
@@ -285,15 +412,6 @@
           value="Skicka Meddelandet"
           class="btn"
         />
-        <div id="myPopup">
-          <div class="popup-content">
-            <h2><span>Request has been sent</span> =></h2>
-            <p>
-              If you still face any issues, let me know by contacting me through
-              my socials
-            </p>
-          </div>
-        </div>
       </form>
     </section>
 
@@ -312,7 +430,7 @@
     </footer>
 
     <!--Custom JS-->
-
+    <script src="https://cdn.sellix.io/static/js/embed.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -322,6 +440,7 @@
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
     <script src="js/index.js"></script>
+    <link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
