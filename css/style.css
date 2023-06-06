@@ -219,10 +219,6 @@ span {
   transition: 0.3s ease-out;
 }
 
-#youtube-video {
-  pointer-events: none;
-}
-
 .btn1:hover {
   box-shadow: 0 0 5rem var(--main-color);
 }
@@ -333,11 +329,6 @@ span {
 .services-container .services-box:hover {
   border-color: var(--main-color);
   transform: scale(1.05);
-}
-
-.services-box .btn.hidden {
-  opacity: 0;
-  pointer-events: none;
 }
 
 .services-box .btn {
@@ -765,4 +756,12 @@ span {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+#youtube-video {
+  /*Om jag vill att man it rör YT Videon i framtiden, 
+
+  pointer-events: none;
+  
+  */
 }
