@@ -10,12 +10,23 @@ function notif() {
     return; // Exit the function if the code has already played
   }
 
-  let x2 = document.querySelector("#myPopup2");
-  x2.style.display = "block";
-
   setTimeout(() => {
-    x2.style.display = "none";
-  }, 5000);
+    let x2 = document.querySelector("#myPopup2");
+    x2.style.display = "block";
+
+    // Play the audio in response to user interaction
+    document.addEventListener("click", function playAudio() {
+      let latestAudio = new Audio("/attachment/Notif.mp3");
+      latestAudio.play();
+
+      // Remove the click event listener after playing the audio
+      document.removeEventListener("click", playAudio);
+    });
+
+    setTimeout(() => {
+      x2.style.display = "none";
+    }, 5000);
+  }, 1000);
 
   // Set the local storage flag to indicate that the code has played
   localStorage.setItem("codePlayed", true);
