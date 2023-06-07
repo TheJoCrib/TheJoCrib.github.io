@@ -1,6 +1,7 @@
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 let navLinks = document.querySelectorAll("header nav a");
+document.cookie = "cookie_name=value; SameSite=Strict; Secure";
 
 //Notifikationer i början, som varnar om X problem
 function notif() {
@@ -261,7 +262,6 @@ function AMV() {
 
     popupDisplayed = true;
   }
-
   var videoPopup = document.getElementById("video-popup");
   var youtubeVideo = document.getElementById("youtube-video");
 
