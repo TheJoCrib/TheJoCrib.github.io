@@ -2,6 +2,27 @@ let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 let navLinks = document.querySelectorAll("header nav a");
 
+//Notifikationer i början, som varnar om X problem
+function notif() {
+  // Check if the code has already played
+  if (localStorage.getItem("codePlayed")) {
+    return; // Exit the function if the code has already played
+  }
+
+  let x2 = document.querySelector("#myPopup2");
+  x2.style.display = "block";
+  let audio1 = new Audio("/attachment/Notif.mp3");
+  audio1.play();
+
+  setTimeout(() => {
+    x2.style.display = "none";
+  }, 5000);
+
+  // Set the local storage flag to indicate that the code has played
+  localStorage.setItem("codePlayed", true);
+}
+
+notif();
 // Toggle the navbar and update the icon when the menu icon is clicked
 menuIcon.onclick = () => {
   toggleNavbar();
