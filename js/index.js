@@ -206,7 +206,7 @@ function DownloadCv() {
   }
 
   // Start file download.
-  download("Furkan - CV.txt", "Exempel : Furkans-CV - Kommer snart -");
+  download("Furkan - CV.txt", "Exempel : Furkans-CV - Kommer ssnart -");
 }
 
 if ((x = 1)) {
