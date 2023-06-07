@@ -11,8 +11,6 @@ function notif() {
 
   let x2 = document.querySelector("#myPopup2");
   x2.style.display = "block";
-  let audio1 = new Audio("/attachment/Notif.mp3");
-  audio1.play();
 
   setTimeout(() => {
     x2.style.display = "none";
